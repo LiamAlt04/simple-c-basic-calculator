@@ -1,36 +1,34 @@
 #include <stdio.h>
 
+void divide();
+void multiply();
+void subtract();
+void add();
+
 float main(){
-    float x, y, a, b, m, n, c,d;
-    float div;
+   int choice;
 
-    printf("please give me your first number: ");
-    scanf("%f", &x);
+    printf("==== Simple Calculator ====\n");
+    printf("1. Addition\n");
+    printf("2. Subtraction\n");
+    printf("3. Multiplication\n");
+    printf("4. Division\n");
+    printf("Choose an operation (1-4): ");
+    scanf("%d", &choice);
 
-    printf("please give me your second number: ");
-    scanf("%f", &y);
+    switch (choice) {
+        case 1: add(); break;
+        case 2: subtract(); break;
+        case 3: multiply(); break;
+        case 4: divide(); break;
+        default: printf("Invalid choice.\n");
+    }
 
-    float sum = x + y;
-    printf("the sum is: %f\n", sum);
+    return 0;
+}
 
-    printf("please give me your first number: ");
-    scanf("%f", &a);
-
-    printf("please give me your second number: ");
-    scanf("%f", &b);
-
-    float sub = a - b;    
-    printf("the sum is: %f\n", sub);
-
-    printf("please give me your first number: ");
-    scanf("%f", &m);
-
-    printf("please give me your second number: ");
-    scanf("%f", &n);
-
-    float mult = m * n;
-    printf("the sum is: %f\n", mult);
-
+void divide(){
+    float c, d, div;
     printf("Please give me your first number: ");
     scanf("%f", &c);
 
@@ -43,9 +41,41 @@ float main(){
         div = c / d;
         printf("the sum is: %f\n", div);
     }
+}
+
+void multiply(){
+    float n, m, mult;
+    printf("please give me your first number: ");
+    scanf("%f", &m);
+
+    printf("please give me your second number: ");
+    scanf("%f", &n);
+
+    mult = m * n;
+    printf("the sum is: %f\n", mult);
+}
+
+void subtract(){
     
+    float a, b, sub;
+    printf("please give me your first number: ");
+    scanf("%f", &a);
 
+    printf("please give me your second number: ");
+    scanf("%f", &b);
 
+    sub = a - b;    
+    printf("the sum is: %f\n", sub);
+}
 
-    return 0;
+void add(){
+    float x, y, sum;
+     printf("please give me your first number: ");
+    scanf("%f", &x);
+
+    printf("please give me your second number: ");
+    scanf("%f", &y);
+
+    sum = x + y;
+    printf("the sum is: %f\n", sum);
 }
