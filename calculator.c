@@ -1,34 +1,49 @@
 #include <stdio.h>
 
-int main(){
-    int x, y, a, b, m, n;
+float main(){
+    float x, y, a, b, m, n, c,d;
+    float div;
 
     printf("please give me your first number: ");
-    scanf("%d", &x);
+    scanf("%f", &x);
 
     printf("please give me your second number: ");
-    scanf("%d", &y);
+    scanf("%f", &y);
 
-    int sum = x + y;
-    printf("the sum is: %d\n", sum);
+    float sum = x + y;
+    printf("the sum is: %f\n", sum);
 
     printf("please give me your first number: ");
-    scanf("%d", &a);
+    scanf("%f", &a);
 
     printf("please give me your second number: ");
-    scanf("%d", &b);
+    scanf("%f", &b);
 
-    int sub = x - y;
-    printf("the sum is: %d\n", sub);
+    float sub = a - b;    
+    printf("the sum is: %f\n", sub);
 
     printf("please give me your first number: ");
-    scanf("%d", &m);
+    scanf("%f", &m);
 
     printf("please give me your second number: ");
-    scanf("%d", &n);
+    scanf("%f", &n);
 
-    int mult = m * n;
-    printf("the sum is: %d\n", mult);
+    float mult = m * n;
+    printf("the sum is: %f\n", mult);
+
+    printf("Please give me your first number: ");
+    scanf("%f", &c);
+
+    printf("Please give me your second number: ");
+    scanf("%f", &d);
+
+    if (d == 0) {
+        printf("Division by zero is not allowed.\n");
+    } else {
+        div = c / d;
+        printf("the sum is: %f\n", div);
+    }
+    
 
 
 
