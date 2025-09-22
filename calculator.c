@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//protocal functions
 void divide();
 void multiply();
 void subtract();
@@ -8,6 +9,7 @@ void add();
 float main(){
    int choice;
 
+   //scans what the user wants to do
     printf("==== Simple Calculator ====\n");
     printf("1. Addition\n");
     printf("2. Subtraction\n");
@@ -16,6 +18,7 @@ float main(){
     printf("Choose an operation (1-4): ");
     scanf("%d", &choice);
 
+    //switch-case to make sure the right function is chosen
     switch (choice) {
         case 1: add(); break;
         case 2: subtract(); break;
@@ -27,11 +30,13 @@ float main(){
     return 0;
 }
 
+//division function
 void divide() {
     float c, d, div;
     int check;
 
     printf("Please give me your first number: ");
+    //checks to make sure the right input is made
     check = scanf("%f", &c);
     if (check != 1) {
         printf("Invalid input. Please enter a numeric value.\n");
@@ -44,7 +49,7 @@ void divide() {
         printf("Invalid input. Please enter a numeric value.\n");
         return;
     }
-
+    //checks for zeros in the dominator
     if (d == 0) {
         printf("Division by zero is not allowed.\n");
     } else {
@@ -52,7 +57,7 @@ void divide() {
         printf("the sum is: %f\n", div);
     }
 }
-
+//multiplication function
 void multiply(){
     float n, m, mult;
     int check;
@@ -71,7 +76,7 @@ void multiply(){
     mult = m * n;
     printf("the sum is: %f\n", mult);
 }
-
+//subtraction function
 void subtract(){
     
     float a, b, sub;
@@ -92,7 +97,7 @@ void subtract(){
     sub = a - b;    
     printf("the sum is: %f\n", sub);
 }
-
+//addition function
 void add(){
     float x, y, sum;
     int check;
