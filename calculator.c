@@ -27,13 +27,23 @@ float main(){
     return 0;
 }
 
-void divide(){
+void divide() {
     float c, d, div;
+    int check;
+
     printf("Please give me your first number: ");
-    scanf("%f", &c);
+    check = scanf("%f", &c);
+    if (check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
 
     printf("Please give me your second number: ");
-    scanf("%f", &d);
+    check = scanf("%f", &d);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
 
     if (d == 0) {
         printf("Division by zero is not allowed.\n");
@@ -45,12 +55,19 @@ void divide(){
 
 void multiply(){
     float n, m, mult;
+    int check;
     printf("please give me your first number: ");
-    scanf("%f", &m);
-
+    check = scanf("%f", &m);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
     printf("please give me your second number: ");
-    scanf("%f", &n);
-
+    check = scanf("%f", &n);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
     mult = m * n;
     printf("the sum is: %f\n", mult);
 }
@@ -58,23 +75,40 @@ void multiply(){
 void subtract(){
     
     float a, b, sub;
+    int check;
     printf("please give me your first number: ");
-    scanf("%f", &a);
-
+    check = scanf("%f", &a);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
+    
     printf("please give me your second number: ");
-    scanf("%f", &b);
-
+   check = scanf("%f", &b);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
     sub = a - b;    
     printf("the sum is: %f\n", sub);
 }
 
 void add(){
     float x, y, sum;
+    int check;
      printf("please give me your first number: ");
-    scanf("%f", &x);
+    check = scanf("%f", &x);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
 
     printf("please give me your second number: ");
-    scanf("%f", &y);
+    check = scanf("%f", &y);
+    if(check != 1) {
+        printf("Invalid input. Please enter a numeric value.\n");
+        return;
+    }
 
     sum = x + y;
     printf("the sum is: %f\n", sum);
